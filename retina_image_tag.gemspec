@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["mail@ffaerber.com"]
   gem.description   = %q{A high-resolution image is loaded when the retina_image_tag is called from a retina display }
   gem.summary       = %q{A high-resolution image is loaded when the retina_image_tag is called from a retina display }
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/ffaerber/retina_image_tag"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
