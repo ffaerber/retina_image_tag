@@ -1,5 +1,6 @@
 module RetinaImageTag
   module ViewHelpers
+    
     def retina_image_tag(image)
        @file_path    = asset_path(image)
        @file_ext     = File.extname(@file_path)
@@ -17,5 +18,6 @@ module RetinaImageTag
          @normal_image_tag
        end
      end
+     
   end
 end
