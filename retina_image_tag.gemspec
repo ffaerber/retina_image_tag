@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.version       = RetinaImageTag::VERSION
   
   gem.add_dependency "railties", "~> 3.1"
-  gem.add_dependency "image_size"
+  gem.add_dependency "image_size", "~> 1.1.0"
 
   
 end
