@@ -29,9 +29,11 @@ and a @2x Retina Images: foo@2x.jpg (800x800px)
 
 and use it like normal
 
-<%= retina_image_tag 'foo.jpg' %>
+<%= retina_image_tag 'foo.jpg', :alt => 'BrainHead', :class => 'some-class' %>
 
+add :size => "@1x" so the foo@2x.jpg is the same size as foo.jpg
 
+<%= retina_image_tag 'foo.jpg', :alt => 'BrainHead', :class => 'some-class', :size => "@1x"  %>
 
 
 ## Contributing
