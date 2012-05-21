@@ -1,7 +1,8 @@
 # retina_image_tag
 
 A high-resolution image is loaded when the retina_image_tag is called from a retina display
-more infos: http://theindustry.cc/2012/03/30/2x-the-retina-dilemma/
+
+more info about the problem: http://theindustry.cc/2012/03/30/2x-the-retina-dilemma/
 
 ## Installation
 
@@ -23,9 +24,11 @@ And then execute:
 ## Usage
 
 create a normal image: foo.jpg (400x400px)
+
 and a @2x Retina Images: foo@2x.jpg (800x800px)
 
 and use it like normal
+
 <%= retina_image_tag 'foo.jpg' %>
 
 
