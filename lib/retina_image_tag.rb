@@ -6,4 +6,4 @@ module RetinaImageTag
   end
 end
 
-require "retina_image_tag/engine"
+require "retina_image_tag/railtie"

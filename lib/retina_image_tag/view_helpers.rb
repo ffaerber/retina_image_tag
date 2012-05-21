@@ -1,20 +1,42 @@
+require "image_size"
+
 module RetinaImageTag
   module ViewHelpers
     
-    def retina_image_tag(image)
-       @file_path    = asset_path(image)
-       @file_ext     = File.extname(@file_path)
-       @file_name    = File.basename(@file_path, @file_ext)
-       @file_dirname = File.dirname(@file_path)
-     
-       @devicePixelRatio = cookies[:devicePixelRatio]
-     
-       @normal_image_tag = image_tag(@file_path)
-       @retina_image_path = @file_dirname+"/"+@file_name+"@2x"+@file_ext
-     
-       if @devicePixelRatio != '1'
-         image_tag(@retina_image_path)
-       else
+    
+    def retina_image( pixel_ratio )
+      
+      if @options[:size]  == '@1x'
+        @options[:size] = ImageSize.path(@rails_image_path+"/"+@file_name+@file_ext).size.to_s  
+      end
+      
+      if File.exist?(@rails_image_path+"/"+@file_name+"@#{pixel_ratio}x"+@file_ext)
+        image_tag(@file_dirname+"/"+@file_name+"@#{pixel_ratio}x"+@file_ext, @options)
+      else
+        @normal_image_tag
+      end
+    end
+    
+    
+    def retina_image_tag(image, options = {})
+      @devicePixelRatio = cookies[:devicePixelRatio]
+      @options          = options
+      @rails_image_path = Rails.application.assets.paths.first
+      @file_path        = asset_path(image)
+      @file_ext         = File.extname(@file_path)
+      @file_name        = File.basename(@file_path, @file_ext)
+      @file_dirname     = File.dirname(@file_path)
+      
+
+      
+      @normal_image_tag  = image_tag(@file_path, @options)
+      
+      case @devicePixelRatio
+        when '2'
+          retina_image '2'
+        when '1.5'
+          retina_image '1.5'
+        else
          @normal_image_tag
        end
      end
