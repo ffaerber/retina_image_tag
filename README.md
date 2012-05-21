@@ -8,13 +8,16 @@ Add this line to your application's Gemfile:
 
     gem 'retina_image_tag'
 
+add this line to application.js:
+	
+	$ //= require retina_image_tag
+
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
 
-    $ gem install retina_image_tag
+
 
 ## Usage
 
