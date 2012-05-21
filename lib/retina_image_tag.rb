@@ -1,5 +1,1 @@
-require "retina_image_tag/version"
-
-module RetinaImageTag
-  # Your code goes here...
-end
+require 'retina_image_tag/railtie' if defined? Rails
