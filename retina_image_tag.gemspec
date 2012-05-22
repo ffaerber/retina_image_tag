@@ -16,5 +16,6 @@ Gem::Specification.new do |gem|
   gem.version       = RetinaImageTag::VERSION
   
   gem.add_dependency "railties", "~> 3.1"
+  gem.add_dependency "rmagick", "~> 2.13.1"
   
 end
