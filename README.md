@@ -4,6 +4,12 @@ A high-resolution image is loaded when the retina_image_tag is called from a ret
 
 more info about the problem: http://theindustry.cc/2012/03/30/2x-the-retina-dilemma/
 
+exampleapp: http://retinaimagetag-demoapp.herokuapp.com/
+
+exampleapp sourcecode: https://github.com/ffaerber/retina_image_tag_demoapp
+
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -29,11 +35,8 @@ and a @2x Retina Images: foo@2x.jpg (800x800px)
 
 and use it like normal
 
-<%= retina_image_tag 'foo.jpg', :alt => 'BrainHead', :class => 'some-class' %>
+<%= retina_image_tag 'foo.jpg', :size => "400x400" %>
 
-add :size => "@1x" so the foo@2x.jpg is the same size as foo.jpg
-
-<%= retina_image_tag 'foo.jpg', :alt => 'BrainHead', :class => 'some-class', :size => "@1x"  %>
 
 
 ## Contributing
