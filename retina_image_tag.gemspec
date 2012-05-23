@@ -17,5 +17,5 @@ Gem::Specification.new do |gem|
   
   gem.add_dependency "railties", "~> 3.1"
   gem.add_dependency "rmagick", "~> 2.13.1"
-  
+  gem.add_dependency "fastimage", "~> 1.2.13"
 end
