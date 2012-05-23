@@ -48,7 +48,7 @@ You not need to scale down the @2x images by hand. There for is the `rake retina
 
 before:
 
-* `foo@2x.jpg (800)x800p)`
+* `foo@2x.jpg (800x800p)`
 * `subdir/bar@2x.png (1000×556px)` 
 
 before:
