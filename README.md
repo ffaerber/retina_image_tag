@@ -44,7 +44,7 @@ And then execute:
 
 start working with the @2x version.
 
-You not need to scale down the @2x images by hand. There for is the `rake retina_image_tag:convert` task. this rake task is looking for @2x images in app/assets/images/ copy,reduce and save them.
+To scale down the @2x images run `rake retina_image_tag:convert`, the rake task will look for @2x image in `app/assets/images/`, creates a copy and renames those files and reduces the image dimensions.
 
 before:
 
