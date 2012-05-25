@@ -2,6 +2,9 @@
 
 retina_image_tag is a ViewHelper for Rails 3.1. in contrast to the normal Rails image_tag knows the retina_image_tag if the user invokes an image on a Apple Retina Display.
 
+[![Dependency Status](https://gemnasium.com/ffaerber/retina_image_tag.png)](https://gemnasium.com/ffaerber/retina_image_tag)
+
+
 ### Retina Display
 The Retina Display on the iPhone4 and iPad3 doubles the pixel resolution of the display.
 You can think about a full screen display with dimensions of 320x480 for iPhone4 and 1024x768 for iPad3. The big difference is that these dimensions are now expressed in points not in pixels. What has changed is the scaling factor of the screen which determines how a point relates to a pixel. The iPhone4 retina display has a scale of 2 so that 1 point = 2 pixels.
