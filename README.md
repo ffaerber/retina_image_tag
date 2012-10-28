@@ -2,8 +2,6 @@
 
 retina_image_tag is a ViewHelper for Rails 3.1. in contrast to the normal Rails image_tag knows the retina_image_tag if the user invokes an image on a Apple Retina Display.
 
-[![Dependency Status](https://gemnasium.com/ffaerber/retina_image_tag.png)](https://gemnasium.com/ffaerber/retina_image_tag)
-
 
 ### Retina Display
 The Retina Display on the iPhone4 and iPad3 doubles the pixel resolution of the display.
@@ -13,8 +11,7 @@ You can think about a full screen display with dimensions of 320x480 for iPhone4
 The '@2x' naming convention will be instantly familiar to any iOS developer. It's simply a way of naming an alternate, high-resolution version of an image so that it will be recognized and used by high-resolution Retina Displays.
 
 ### Example
-herokuapp: <http://retinaimagetag-demoapp.herokuapp.com/>
-
+herokuapp: <http://polar-caverns-6494.herokuapp.com/>
 sourcecode: <https://github.com/ffaerber/retina_image_tag_demoapp/>
 
 
@@ -36,8 +33,8 @@ And then execute:
 
 
 
-## Usage
-
+## Usage via Asset Pipeline
+ 
 ```erb
 <%= retina_image_tag 'foo.jpg', :size => "400x400" %>
 ```
@@ -60,6 +57,16 @@ after:
 * `foo.jpg (400x400px)`
 * `subdir/bar@2x.png (1000×556px)`
 * `subdir/bar.png (500×278px)`
+
+
+## Usage via CarrierWave
+ 
+```erb
+<%= retina_image_tag @picture.image.thumb %>
+```
+
+Uploader: <https://github.com/ffaerber/retina_image_tag_demoapp/blob/master/app/uploaders/image_uploader.rb>
+
 
 
 ## Contributing
