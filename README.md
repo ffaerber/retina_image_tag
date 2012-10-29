@@ -12,6 +12,7 @@ The '@2x' naming convention will be instantly familiar to any iOS developer. It'
 
 ### Example
 herokuapp: <http://polar-caverns-6494.herokuapp.com/>
+
 sourcecode: <https://github.com/ffaerber/retina_image_tag_demoapp/>
 
 
