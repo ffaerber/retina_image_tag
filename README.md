@@ -11,7 +11,7 @@ You can think about a full screen display with dimensions of 320x480 for iPhone4
 The '@2x' naming convention will be instantly familiar to any iOS developer. It's simply a way of naming an alternate, high-resolution version of an image so that it will be recognized and used by high-resolution Retina Displays.
 
 ### Example
-herokuapp: <http://polar-caverns-6494.herokuapp.com/>
+herokuapp: <http://retinaimagetag.herokuapp.com/>
 
 sourcecode: <https://github.com/ffaerber/retina_image_tag_demoapp/>
 
