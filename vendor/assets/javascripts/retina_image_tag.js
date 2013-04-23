@@ -1,4 +1,4 @@
-if (document.cookie == "") {
+if (("; "+document.cookie).indexOf("; devicePixelRatio=")<0) {
   document.cookie = 'devicePixelRatio = ' + window.devicePixelRatio;
-  if (document.cookie != "devicePixelRatio=1") window.location.reload();
+  if (window.devicePixelRatio != 1) window.location.reload();
 }
