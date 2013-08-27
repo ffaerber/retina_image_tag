@@ -1,6 +1,26 @@
 # retina_image_tag
 
+### How it Works
 retina_image_tag is a ViewHelper for Rails 3.1. in contrast to the normal Rails image_tag knows the retina_image_tag if the user invokes an image on a Apple Retina Display.
+When the page loads on the screen, a cookie hold the devicePixelRatio set by JavaScript.
+When an image is requested by the server, retina_image_tag checks for the following.
+A cookie holding devicePixelRatio exists.
+The value set in the cookie is greater than 1.
+If any of the above are false, it will send the regular image. 
+Otherwise, the high-res image is sent.
+
+### Example
+herokuapp: <http://retinaimagetag.herokuapp.com/>
+
+sourcecode: <https://github.com/ffaerber/retina_image_tag_demoapp/>
+
+
+### Benfits
+* Only one image is loaded by the view.
+* compatible with the rails 3 assetpipline. like assethost and assets:precompile
+* no photoshop is needed, an rake task is includet for downsclaing to normal size.
+* Compatible with Carrierwave for user genereted retina images
+* Fallback to regular image if JavaScript and Cookies are disabled.
 
 
 ### Retina Display
@@ -10,10 +30,7 @@ You can think about a full screen display with dimensions of 320x480 for iPhone4
 ### @2x
 The '@2x' naming convention will be instantly familiar to any iOS developer. It's simply a way of naming an alternate, high-resolution version of an image so that it will be recognized and used by high-resolution Retina Displays.
 
-### Example
-herokuapp: <http://retinaimagetag.herokuapp.com/>
 
-sourcecode: <https://github.com/ffaerber/retina_image_tag_demoapp/>
 
 
 
