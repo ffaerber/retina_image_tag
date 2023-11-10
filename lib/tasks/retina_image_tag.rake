@@ -1,4 +1,4 @@
-require 'RMagick'
+require 'rmagick'
 
 namespace :retina_image_tag do
   desc 'convert @2x images to normal images'
